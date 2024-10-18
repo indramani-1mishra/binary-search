@@ -1,0 +1,32 @@
+Binary Search Algorithm
+Input:
+
+A sorted array arr of integers.
+An integer data to search for in the array.
+The length of the array n.
+Initialization:
+
+Set two pointers: l (left) to 0 and r (right) to n - 1 (the last index of the array).
+Iterate:
+
+While l is less than or equal to r:
+Calculate the midpoint mid using the formula:
+mid=𝑙+(𝑟−𝑙)/2
+mid=l+ 2(r−l)
+​
+ 
+Compare the value at arr[mid] with data:
+If arr[mid] is equal to data:
+Return mid (the index of the found element).
+If arr[mid] is greater than data:
+Set r to mid - 1 (search in the left half).
+If arr[mid] is less than data:
+Set l to mid + 1 (search in the right half).
+Termination:
+
+If the loop terminates without returning, it means data is not found in the array.
+Return -1 to indicate that the element is not present.
+Output:
+
+If result is not -1, print the index where data was found.
+If result is -1, print a message indicating that the element was not found.
