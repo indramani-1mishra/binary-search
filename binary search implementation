@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner sc= new Scanner(System.in);
+	
+
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        
+        int data = 6; 
+        int result = BinarySearch(arr, arr.length, data); 
+        
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+
+        System.out.print("Array elements: ");
+        for (int element : arr) {
+            System.out.print(element + " ");
+        }
+      
+    }
+
+	
+	
+	
+	public static int BinarySearch(int[]arr,int n,int data)
+	{
+	    int l=0,r=n-1;
+	   
+	    while(l<r)
+	    {
+	         int mid = l + (r - l) / 2;
+	        if(data==arr[mid]){
+	            return mid;
+	        }
+	        else if(data<arr[mid])
+	        {
+	            r=mid-1;
+	        }
+	        else{
+	            l=mid+1;
+	        }
+	    }
+	    return -1;
+	}
+}
